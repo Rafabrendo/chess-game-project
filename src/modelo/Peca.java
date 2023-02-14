@@ -7,6 +7,7 @@ public abstract class Peca {
     private String imagem; // nome do arquivo que tem a imagem
     private Boolean eliminada = false;
     private Boolean selecionada = false;
+    private Tabuleiro tabuleiro;
 
     public Peca(EnumCor cor, int linha, int coluna, String imagem, boolean eliminada, boolean selecionada){
         this.cor = cor;
@@ -66,4 +67,14 @@ public abstract class Peca {
     public void setSelecionada(Boolean selecionada) {
         this.selecionada = selecionada;
     }
+
+    public void setTabuleiro(Tabuleiro tabuleiro){
+        this.tabuleiro = tabuleiro;
+    }
+
+    public Tabuleiro getTabuleiro(){
+        return this.tabuleiro;
+    }
+
+
 }
